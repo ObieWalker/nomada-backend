@@ -5,7 +5,7 @@ import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 import { sendOtpEmail, sendPasswordResetEmail } from "../utils/sendEmail";
 import { filterUser } from "../utils/filterUser";
-import { WEEK_TOKEN_EXPIRATION,  } from "../utils/constants";
+import { WEEK_TOKEN_EXPIRATION, FIFTEEN_MINUTE_TOKEN } from "../utils/constants";
 
 /**
  * Registers a new user.
