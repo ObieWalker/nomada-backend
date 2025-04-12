@@ -12,6 +12,7 @@ import groupMemberRoutes from "./routes/groupMemberRoutes";
 import rideRoutes from "./routes/rideRoutes";
 import rideStopRoutes from "./routes/rideStopRoutes";
 import sosRoutes from "./routes/sosRoutes";
+import websocketRoutes from "./routes/websocketRoutes";
 import dotenv from "dotenv";
 import { requestLogger } from './middleware/logger';
 
@@ -36,5 +37,6 @@ app.use("/api/member", groupMemberRoutes);
 app.use("/api/ride", rideRoutes);
 app.use("/api/stop", rideStopRoutes);
 app.use("/api/sos", sosRoutes);
+app.use("/api/ws", websocketRoutes);
 
 export default app;
