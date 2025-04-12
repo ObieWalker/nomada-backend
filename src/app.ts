@@ -19,7 +19,7 @@ import { requestLogger } from './middleware/logger';
 dotenv.config();
 
 const app = express();
-const server = http.createServer(app);
+// const server = http.createServer(app);
 // runWebSocket(server);
 
 setupSwagger(app); 

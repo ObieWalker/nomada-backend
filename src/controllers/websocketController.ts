@@ -50,9 +50,9 @@ export const sendWebSocketMessage = async (req: Request, res: Response): Promise
 // Get WebSocket connection status
 export const getConnectionStatus = async (req: Request, res: Response): Promise<void> => {
   try {
-    // Count active connections
+    // @ts-ignore
     const io = global.io;
-    const connectedClients = io.sockets.sockets.size;
+    const connectedClients = io?.sockets?.sockets?.size || 0;
     
     res.status(200).json({ 
       status: 'active',

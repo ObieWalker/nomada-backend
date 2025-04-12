@@ -11,7 +11,7 @@ const server = http.createServer(app);
 
 // Initialize WebSocket server
 const io = initializeWebSocketServer(server);
-(global as any).io = io; // Make io globally available
+(global as any).io = io; // Type assertion to avoid the error
 
 sequelize.sync({ alter: true }).then(() => {
   console.log("Database connected and schema updated");

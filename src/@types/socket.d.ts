@@ -1,5 +1,5 @@
 import { Socket } from 'socket.io';
-import { DefaultEventsMap } from 'socket.io/dist/typed-events';
+import { Server } from 'socket.io';
 import { UserPayload } from './userPayload';
 
 declare module 'socket.io' {
@@ -11,5 +11,7 @@ declare module 'socket.io' {
 }
 
 declare global {
-  var io: any;
+  var io: Server | undefined;
 }
+
+export {};
